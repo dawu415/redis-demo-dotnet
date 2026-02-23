@@ -1,4 +1,4 @@
-# Redis Demo (.NET) - Steeltoe on TAS
+# Redis Demo (.NET) - Steeltoe on TAS/TPCF
 
 A .NET 8/10 / Steeltoe companion to the Java Spring Boot version — same endpoints, same Redis data structures, same Redis service binding. 
 Validates connectivity and functional parity across both runtimes before migrating from Redis Enterprise to Credhub Service.
