@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>RedisDemo</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Steeltoe v4 Connectors - auto-parses VCAP_SERVICES for Redis bindings on TAS -->
+    <PackageReference Include="Steeltoe.Connectors" Version="4.0.0" />
+
+    <!-- Steeltoe v4 Cloud Foundry config provider - reads VCAP_* env vars -->
+    <PackageReference Include="Steeltoe.Configuration.CloudFoundry" Version="4.0.0" />
+
+    <!-- Redis client -->
+    <PackageReference Include="StackExchange.Redis" Version="2.8.16" />
+
+    <!-- Steeltoe v4 Management / actuator endpoints for TAS -->
+    <PackageReference Include="Steeltoe.Management.Endpoint" Version="4.0.0" />
+  </ItemGroup>
+
+</Project>

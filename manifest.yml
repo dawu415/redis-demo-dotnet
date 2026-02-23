@@ -1,0 +1,13 @@
+---
+applications:
+  - name: dotnet-redis-demo
+    memory: 512M
+    instances: 1
+    path: publish/
+    buildpacks:
+      - dotnet_core_buildpack
+    env:
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+    services:
+      # cf create-service redislabs small-redis redis-enterprise-service
+      - redis-enterprise-service

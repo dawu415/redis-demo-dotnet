@@ -1,0 +1,18 @@
+---
+applications:
+  - name: dotnet-credhub-redis-demo
+    memory: 512M
+    instances: 1
+    path: publish/
+    buildpacks:
+      - dotnet_core_buildpack
+    env:
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+    services:
+      # Need -t "redis" to tag credhub service instance as redis for Steeltoe Connector to work.
+      # The presence of "tls_port" will force connection to use tls/ssl.
+      # cf create-service credhub default redis-creds-dotnet -t 'redis' -c '{
+      #       "host": "redis-17113.internal.redis-enterprise-01.xx.com","port": 17113,"password":"xxxx", "tls_port": 12345
+      # }'           
+      - redis-creds-dotnet
+
