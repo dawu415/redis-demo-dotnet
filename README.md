@@ -5,6 +5,8 @@ Validates connectivity and functional parity across both runtimes before migrati
 For the example steps below, it is assumed you have the CF cli and jq installed on your machine, and that you are logged into 
 a TPCF foundation via the CF cli.
 
+A Java (Spring Boot) version of this application is available at https://github.com/dawu415/redis-demo-java.
+
 ## Tech Stack
 
 - **.NET 10**
@@ -142,3 +144,7 @@ Note: `/api/items/info`, may not work due to admin mode being required.
    ```
 
 5. Run the same CRUD operations to validate functional parity.
+
+# Contributions
+Thanks to @rabeyta for his time on pairing on this.
+
